@@ -1,8 +1,13 @@
 const average = (...args) => {
-	let added = 0
-	for (let i = 0; i < args.length; i++) {
-		added += args[i];
-	}
-	return added / args.length
-}
-console.log(average(1, 3, 6, 6))
+    let sum = 0;
+    const arrayLength = args.length;
+
+    args.forEach((value) =>
+        sum += value
+    );
+    console.log(`The average value = ${sum/arrayLength}`);
+};
+
+average(4, 6, 5);
+average(1, 3, 6, 6);
+average(3, 8);
